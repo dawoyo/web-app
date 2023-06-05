@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.net.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+#<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>AcadaLearning- Home Page</title>
@@ -9,8 +9,8 @@
 </head>
 </head>
 <body>
-<h1>Welcome to Acada Learning, Calgary, Canada Office.</h1>
-<h1>We are developing and supporting quality Software Solutions to millions of clients.
+<h1 align="center">Welcome to Acada Learning, Calgary, Canada Office.</h1>
+<h1 align="center">We are developing and supporting quality Software Solutions to millions of clients.
 	We offer Training for DevOps with Linux and Cloud equipping IT Engineers for best performance. God Loves you. Everyone will be hired with multiple job offers, Amen</h1>
 <hr>
 <br>
