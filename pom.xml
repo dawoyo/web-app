@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>3.0.0-SNAPSHOT</version>
+	<version>1.0.0-RELEASE</version>
 	
 	<name>maven-web-application</name>
 
@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>ACADA Learning Releases Nexus Repository</name>
-	      <url>http://172.31.3.101:8081/repository/Paypal_release/</url>
+	      <url>http://172.31.3.101:8081/repository/RBC_release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>ACADA Learning Snapshot Nexus Repository </name>
-	      <url>http://172.31.3.101:8081/repository/Paypal_snapshot/</url>
+	      <url>http://172.31.3.101:8081/repository/RBC_snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
