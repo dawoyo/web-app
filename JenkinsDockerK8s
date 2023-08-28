@@ -1,0 +1,28 @@
+node {
+    
+    stage ("Git Clone"){
+        git branch: 'master', credentialsId: 'Github_Cred', url: 'https://github.com/dawoyo/web-app.git'
+    }
+    
+    stage ("Maven Clean Build"){
+        def mavenHome = tool name: "maven3.8.6", type: "maven"
+        def mavenCMD = "${mavenHome}/bin/mvn"
+        sh "${mavenCMD} clean package"
+    }
+    
+   stage('Build Docker Image'){
+        sh 'docker build -t dawoyo/web-app .'
+    }
+    
+    stage ("Docker Image Push"){
+        withCredentials([string(credentialsId: 'Docker_Hub_Cred', variable: 'Docker_Hub_Cred')]) {
+         sh 'docker login -u dawoyo -p $Docker_Hub_Cred'
+        }
+        
+        sh "docker push dawoyo/web-app"
+    }
+    
+    stage ("Kubernetes Deployment")
+        sh "kubectl apply -f webapp.yml"
+}
+
