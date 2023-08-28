@@ -1,0 +1,36 @@
+piVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  namespace: dev
+spec: 
+  selector:
+    matchLabels:
+      app: webapp
+  replicas: 2
+  template:
+    metadata:
+      name: webapp
+      labels:
+        app: webapp
+    spec: 
+      containers:
+      - name: webapp
+        image: dawoyo/cohort11
+        ports:
+        - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp
+  namespace: dev
+spec: 
+  selector: 
+    app: webapp
+  ports: 
+  - port: 80
+    targetPort: 8080
+    nodePort: 31000
+  type: NodePort
