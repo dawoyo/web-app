@@ -16,7 +16,7 @@ spec:
     spec: 
       containers:
       - name: webapp
-        image: dawoyo/cohort11
+        image: dawoyo/tomcat
         ports:
         - containerPort: 8080
 
